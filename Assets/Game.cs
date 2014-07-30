@@ -44,7 +44,7 @@ public class Game : MonoBehaviour {
 					currentPM = (currentPM + 1) % physicMaterials.Length;
 					collider.material = physicMaterials[currentPM];
 				}
-				GUI.Box(new Rect(20, 130, 260, 30), "Highscore: " + highscore);
+				GUI.Box(new Rect(20, 130, 260, 30), "Highscore: " + highscore.ToString(".##"));
 			}
 			GUI.EndGroup();
 			
