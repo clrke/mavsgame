@@ -51,6 +51,7 @@
      <Compile Include="Assets\Movement.cs" />
      <Compile Include="Assets\RotationScript.cs" />
      <Compile Include="Assets\Spin.cs" />
+     <Compile Include="Assets\SpinSwitcher.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
