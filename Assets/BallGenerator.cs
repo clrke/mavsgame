@@ -37,7 +37,8 @@ public class BallGenerator : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		GUI.BeginGroup(new Rect(Screen.width/2 - 150, Screen.height/2 - 60, 300, 120));
+		
+		GUI.BeginGroup(new Rect(Screen.width/2 - 150, Screen.height - 120, 300, 120));
 		{
 			GUI.Box(new Rect(0, 0, 300, 120), "");
 			if(GUI.Button(new Rect(20, 15, 260, 40), "Start"))
