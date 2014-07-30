@@ -1,4 +1,4 @@
 mavsgame
 ========
 
-Game Development tutorial for my classmate Mavs
+Game Development Tutorial in Unity for my classmate Mavs
