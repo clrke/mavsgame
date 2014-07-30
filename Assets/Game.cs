@@ -27,9 +27,9 @@ public class Game : MonoBehaviour {
 		
 		if(Time.timeScale == 0)
 		{
-			GUI.BeginGroup(new Rect(0, 0, 300, 180));
+			GUI.BeginGroup(new Rect(0, 0, 300, 200));
 			{
-				GUI.Box(new Rect(0, 0, 300, 180), "Menu");
+				GUI.Box(new Rect(0, 0, 300, 200), "Menu");
 				if(GUI.Button(new Rect(20, 30, 260, 20), "Resume"))
 					Time.timeScale = 1;
 				if(GUI.Button(new Rect(20, 55, 260, 20), "Restart"))
@@ -44,7 +44,13 @@ public class Game : MonoBehaviour {
 					currentPM = (currentPM + 1) % physicMaterials.Length;
 					collider.material = physicMaterials[currentPM];
 				}
+				
 				GUI.Box(new Rect(20, 130, 260, 30), "Highscore: " + highscore.ToString(".##"));
+				if(GUI.Button(new Rect(20, 165, 260, 20), "Back to Menu"))
+				{
+					Application.LoadLevel("menu");
+					Time.timeScale = 1;
+				}
 			}
 			GUI.EndGroup();
 			

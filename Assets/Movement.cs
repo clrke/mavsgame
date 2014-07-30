@@ -5,13 +5,18 @@ public class Movement : MonoBehaviour {
 	
 	public float speed;
 	private Vector3 rotation;
+	private Mesh mesh;
+	public Vector3[] vertices;
 	// Use this for initialization
 	void Start () {	
 		rotation = new Vector3();
+		mesh = GetComponent<MeshFilter>().mesh;
+		vertices = mesh.vertices;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		mesh.vertices = vertices;
 		if(Time.timeScale > 0)
 		{
 			rotation += new Vector3(Random.Range(-1, 2), 0, Random.Range(-1, 2))/50;
