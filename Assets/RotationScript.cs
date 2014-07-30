@@ -17,7 +17,7 @@ public class RotationScript : MonoBehaviour {
 	void Update () {
 		if(Time.time - start >= duration)
 		{
-			duration = Random.Range(10f, 20f);
+			duration = Random.Range(5f, 10f);
 			start = Time.time;
 			rotationY = -rotationY;
 		}
